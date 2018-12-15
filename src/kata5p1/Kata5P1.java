@@ -1,10 +1,16 @@
 package kata5p1;
 
-import static kata5p1.SelectApp.createNewTable;
+import java.util.List;
 
 public class Kata5P1 {
-    public static void main(String[] args) {
-        createNewTable();
+    public static void main(String[] args) throws Exception {
+        String sql = "CREATE TABLE IF NOT EXISTS EMAIL (\n"
+        + " Id integer PRIMARY KEY AUTOINCREMENT,\n"
+        + " Mail text NOT NULL);";
+        new SelectApp().createNewTable(sql);
     }
+    
+    
 }
+
 
